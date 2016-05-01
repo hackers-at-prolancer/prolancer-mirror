@@ -50,6 +50,8 @@ body {
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:hover {
     color: #FFF;
     padding: 22px 10px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 
@@ -252,10 +254,9 @@ h1::after {
   CONTACT STYLES
   ===================================*/
 #contact-sec {
-    padding-top: 10px;
-    padding-bottom: 60px;
-    bottom:70px;
-    background: url(contact.jpg) no-repeat center center;
+
+    min-height: 300px;
+    background-color: white;
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
@@ -269,7 +270,12 @@ h1::after {
 }
 
 #contact-sec h1 {
-    color:#fff;
+    color:#1A94C4;
+    text-align: center;
+}
+#contact-sec p {
+    color: black;
+    text-align: center;
 }
 #contact-sec .form-control{
     background-color:rgba(255, 255, 255, 0);
@@ -285,7 +291,7 @@ h1::after {
     height:50px;
     width:100%;
     padding:5px 20px;
-    background-color: rgba(28, 43, 75, .90);
+    background-color: rgba(47,148,132, 1);;
     text-align:right;
     color:#fff;
     font-size:15px;

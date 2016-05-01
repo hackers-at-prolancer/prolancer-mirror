@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/home'
+  get 'session/create'
+  get 'session/destroy'
+  get 'auth/facebook/callback', to: redirect('welcome/home')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
