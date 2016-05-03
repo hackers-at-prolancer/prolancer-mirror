@@ -85,6 +85,13 @@ body {
     text-transform: uppercase;
 }
 
+.home-sec h4 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+
 
 
 .set-flexi {

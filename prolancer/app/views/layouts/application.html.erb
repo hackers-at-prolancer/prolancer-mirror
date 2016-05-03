@@ -7,44 +7,54 @@
   <title><%= content_for?(:title) ? yield(:title) : "Prolancer" %></title>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag "bootstrap",  "flexslider", "style", "font-awesome.min" %>
+  <%= stylesheet_link_tag "bootstrap", "flexslider", "style", "font-awesome.min" %>
   <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" %>
 </head>
 <body>
 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-<nav class="navbar navbar-header navbar-inverse navbar-fixed-top ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">ProLancer</a>
+  <nav class="navbar navbar-header navbar-inverse navbar-fixed-top ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ProLancer</a>
+      </div>
+
+      <div class="nav navbar-nav navbar-right">
+        <ul><%= if not session[:user_id].nil? then
+                  image_tag "#{session[:user_image]}"
+                end %></ul>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+
+        <li><a href="">HOME</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><%= if not session[:user_id].nil? then
+                  link_to "SIGNOUT", signout_path
+                else
+                  link_to "SIGNIN", '/auth/facebook'
+                end %></li>
+      </ul>
+
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">Sign Up</a></li>
-      <li><a href="#">Sign In</a></li>
-    </ul>
-  </div>
-</nav>
-  </div>
+  </nav>
+</div>
 <div class="home-sec">
   <div class="overlay">
     <div class="container">
-      <div class="row text-center " >
+      <div class="row text-center ">
 
         <div class="col-lg-12  col-md-12 col-sm-12">
 
-          <div class="flexslider set-flexi" id="main-section" >
+          <div class="flexslider set-flexi" id="main-section">
             <ul class="slides move-me">
               <li>
                 <h4>Welcome to</h4>
                 <h1>ProLancer</h1>
-                <h4>Looking for a freelance service provider?</h4>
               </li>
               <li>
-                <h4>India's most reliable marketplace for all services</h4>
+                <h4>Welcome to</h4>
                 <h1>ProLancer</h1>
-                <h4>Do you want to work as service provider?</h4>
+                <h3>India's most reliable service marketplace</h3>
               </li>
             </ul>
           </div>
@@ -54,9 +64,9 @@
   </div>
 
 </div>
-  <div class="website-body">
-    <%= yield %>
-  </div>
+<div class="website-body">
+  <%= yield %>
+</div>
 
 <div id="footer">
   &copy 2016 prolancer.co.in | All Rights Reserved |
