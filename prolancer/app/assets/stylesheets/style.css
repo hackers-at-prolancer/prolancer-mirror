@@ -20,6 +20,7 @@ body {
 
 .set-pad {
     padding-top:35px;
+
 }
 .set-row-pad {
     padding-top:30px;
@@ -39,17 +40,17 @@ body {
     font-size: 12px;
     font-weight: 900;
     letter-spacing: 1px;
-    min-height: 70px;
+    min-height: 50px;
 }
 
 
 .navbar-inverse {
     border-color: transparent;
+    min-width: auto;
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a:hover {
     color: #FFF;
-    padding: 22px 10px;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -59,8 +60,6 @@ body {
   HOME STYLES
     ===================================*/
 .home-sec {
-    padding-top: 10px;
-    padding-bottom: 60px;
     background: url(header.jpg) no-repeat center center;
     padding: 0;
     -webkit-background-size: cover;
@@ -71,14 +70,12 @@ body {
 
 .home-sec .overlay {
     background: rgba(38, 50, 88, 0.89);
-    min-height: 450px;
 }
 
 .home-sec h1 {
     color: #2f9484;
     font-weight: 900;
-    font-size: 50px;
-    padding-bottom: 35px;
+    font-size: 40px;
 }
 
 .home-sec h3 {
@@ -88,7 +85,7 @@ body {
 .home-sec h4 {
     text-transform: uppercase;
     text-decoration: underline;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -302,4 +299,89 @@ h1::after {
     text-align:right;
     color:#fff;
     font-size:15px;
+}
+
+/*    --------------------------------------------------
+	:: Login Section
+	-------------------------------------------------- */
+#login {
+    padding-top: 50px;
+
+}
+#login .form-wrap {
+    width: 30%;
+    margin:  auto;
+    border-color: #6d6d6d;
+    border: medium  ;
+}
+#login h1 {
+    color: #1fa67b;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+}
+#login .form-group {
+    margin-bottom: 25px;
+}
+#login .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#login .checkbox.show:before {
+    content: '\e013';
+    color: #1fa67b;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Glyphicons Halflings';
+}
+#login .checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+#login .checkbox .label {
+    color: #6d6d6d;
+    font-size: 13px;
+    font-weight: normal;
+}
+#login .btn.btn-custom {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#login .btn.btn-facebook {
+    color: #fff;
+    background-color: #3b5998;
+    width: 100%;
+    height: auto;
+}
+
+#login .forget {
+    font-size: 13px;
+    text-align: center;
+    display: block;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel-heading h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
 }

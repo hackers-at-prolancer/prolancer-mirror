@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     session[:user_image] = user.image_url
     session[:user_name] = user.name
-    redirect_to root_url
+    redirect_to '/user_navigation/landing', notice: "Logged in to prolancer."
   end
 
   def new
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
       session[:user_name] = user.name
-      redirect_to '/welcome/home'
+      redirect_to 'user_navigation/landing'
     else
       redirect_to login_url, alert: "Incorrect user name and password"
     end

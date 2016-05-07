@@ -2893,12 +2893,11 @@ fieldset[disabled] .btn-success.active {
     background-color: #fff;
 }
 .btn-info {
-    color: #fff;
-    background-color: teal;
-    border-color: #46b8da;
-    width: auto;
-    height: auto;
-}
+     color: #fff;
+     background-color: teal;
+     width: 50%;
+     height: auto;
+ }
 .btn-info:hover,
 .btn-info:focus,
 .btn-info:active,
@@ -3885,7 +3884,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     height: 50px;
     padding: 15px 15px;
     font-size: 18px;
-    line-height: 20px;
     color: teal;
 }
 .navbar-brand:hover,

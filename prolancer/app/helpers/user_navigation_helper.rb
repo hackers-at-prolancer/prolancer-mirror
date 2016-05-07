@@ -1,0 +1,2 @@
+module UserNavigationHelper
+end

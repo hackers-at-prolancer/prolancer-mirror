@@ -7,7 +7,7 @@
   <title><%= content_for?(:title) ? yield(:title) : "Prolancer" %></title>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag "bootstrap", "flexslider", "style", "font-awesome.min" %>
+  <%= stylesheet_link_tag  "flexslider", "font-awesome.min",  "bootstrap",  "bootcards-desktop.min","style" %>
   <%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" %>
 </head>
@@ -29,9 +29,7 @@
         <li><a href="">HOME</a></li>
         <li><a href="#">CONTACT US</a></li>
         <li><%= if not session[:user_id].nil? then
-                  link_to "SIGNOUT", signout_path
-                else
-                  link_to "SIGNIN", '/auth/facebook'
+                  link_to "SIGNOUT", signout_path, :class => "btn btn-custom btn-facebook btn-block"
                 end %></li>
       </ul>
 
@@ -58,11 +56,23 @@
               </li>
             </ul>
           </div>
+          <div class="container" id="login">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-wrap">
+                  <%= if session[:user_id].nil? then
+                        link_to "LOGIN WITH FACEBOOK", '/auth/facebook', :class => "btn btn-custom btn-facebook btn-block" end %>
+                  <%= if session[:user_id].nil? then
+                        link_to "LOGIN WITH EMAIL OR PH#", '/welcome/login', :class => "btn btn-custom btn-info btn-block"
+                      end %>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 <div class="website-body">
   <%= yield %>
@@ -74,7 +84,7 @@
 </div>
 <!-- /container -->
 <!--  Jquery Core Script -->
-<%= javascript_include_tag "jquery-1.10.2", "bootstrap", "jquery.flexslider", "jquery.flexslider", "scrollReveal", "jquery.easing.min", "custom" %>
+<%= javascript_include_tag "jquery-1.10.2", "bootstrap", "jquery.flexslider", "jquery.flexslider", "scrollReveal", "jquery.easing.min", "custom", "bootcards.min" %>
 </body>
 </html>
 

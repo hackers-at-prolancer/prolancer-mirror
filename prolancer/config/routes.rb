@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'user_navigation/landing'
+
   resources :users
   match 'auth/:provider/callback' => 'sessions#create_from_facebook', :via => [:get], :as => 'signin_facebook'
   get 'auth/failure', to: redirect('/')
   match 'signout' => 'sessions#destroy', :via => [:get], as: 'signout'
+
+  get 'welcome/login'
+  get 'welcome/cities'
 
 
 
