@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503035243) do
+ActiveRecord::Schema.define(version: 20160508001930) do
+
+  create_table "landing_page_configs", force: :cascade do |t|
+    t.string   "header",      limit: 255
+    t.string   "description", limit: 255
+    t.string   "fa_icon",     limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",         limit: 255

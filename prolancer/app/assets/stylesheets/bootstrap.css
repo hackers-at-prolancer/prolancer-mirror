@@ -12,6 +12,8 @@ html {
 }
 body {
     margin: 0;
+    text-align: center;
+    align-items: center;
 }
 article,
 aside,
@@ -183,11 +185,27 @@ optgroup {
 table {
     border-spacing: 0;
     border-collapse: collapse;
+    width: 100%;
+    border-color: black;
 }
-td,
 th {
-    padding: 0;
+  background-color: teal;
+  color: white;
+  border-color: black;
+  text-align: justify;
 }
+td {
+    padding: 8px;
+    text-align: justify;
+    border-color: black;
+}
+table, td, th {
+    border: 1px solid black;
+}
+
+tr:nth-child(even){background-color: #e3e3e3}
+tr:hover {background-color: #cfdddd}
+
 @media print {
     * {
         color: #000 !important;
@@ -2368,6 +2386,7 @@ output {
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    align-content: center;
 }
 .form-control:focus {
     border-color: #66afe9;

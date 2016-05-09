@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :landing_page_configs
+
   get 'user_navigation/landing'
 
   resources :users

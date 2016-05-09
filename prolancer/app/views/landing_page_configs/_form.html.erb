@@ -1,0 +1,29 @@
+<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+<%= form_for(@landing_page_config) do |f| %>
+  <% if @landing_page_config.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@landing_page_config.errors.count, "error") %> prohibited this landing_page_config from being saved:</h2>
+
+      <ul>
+      <% @landing_page_config.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :header, class: "form-control-custom", placeholder: "Title"  %>
+  </div>
+  <div class="field">
+    <%= f.text_field :description, class: "form-control-custom", placeholder: "Description < 100 chars" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :fa_icon, class: "form-control-custom", placeholder: "Font awesome icon name e.g. fa-cart" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'SAVE', class: "btn btn-lg btn-info" %>
+  </div>
+
+<% end %>
+</div>
