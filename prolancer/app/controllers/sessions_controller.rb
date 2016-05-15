@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+  skip_before_filter :check_auth
 
   def create_from_facebook
     user = User.from_omniauth(env["omniauth.auth"])

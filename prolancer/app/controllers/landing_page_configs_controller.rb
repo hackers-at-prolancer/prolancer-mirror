@@ -1,4 +1,7 @@
 class LandingPageConfigsController < ApplicationController
+
+
+
   before_action :set_landing_page_config, only: [:edit, :update, :destroy]
 
   # GET /landing_page_configs
